@@ -1,26 +1,85 @@
-1. Bagaimana mengembalikan git commit yang telah di-push dan telah publik
-git revert <bad commit-hash>
-git push
+**Bagaimana mengembalikan git commit yang telah di-push dan telah publik
+1. git revert <bad commit-hash>
+2. git push
 
-2. Bagaimana melakukan squash commit N terakhir menjadi satu commit?
-git rebase --interactive <commit-hash>
-ketik s (squash) untuk commit yang ingin disatukan
-:wq
+**Bagaimana melakukan squash commit N terakhir menjadi satu commit?
+1. git log
 
-3. Apa itu konflik di git dan bagaimana cara mengatasinya?
+2. Tentukan N, di mana N adalah jumlah commit yang ingin disatukan, dimulai dari commit yang paling terbaru.
 
-4. Bagaimana Anda bisa menyalin commit yang dibuat di satu branch ke branch lain (misalnya branch perbaikan hotfix dari cabang yang release ke cabang development saat ini)?
+3. git rebase --interactive HEAD~N
 
-5. Bagaimana fungsi dari git hooks
+atau
 
-6. Apa perbedaan antara git pull dan git fetch?
+1. git rebase --interactive <commit-hash>. di mana <commit-hash> merupakan commit sebelum commit pertama yang ingin digabung ulang.
 
-Jelaskan fungsi dari tag meta dalam HTML
-Apa perbedaan antara Span dan div
-Jelaskan perbedaan antara block element dan inline element
-Jelaskan perbedaan antara cookie, session, dan localStorage dan sessionStorage
-Apa itu WebP?
-Sebutkan fitur-fitur penting dari HTML5
+2. ketik s (squash) untuk commit yang ingin disatukan
+3. ketik w untuk rebase
+
+**Apa itu konflik di git dan bagaimana cara mengatasinya?
+Ketika terdapat perubahan konten file yang sama dalam branch yang berbeda, misalnya branch Local, Base, dan Remote, maka dapat terjadi konflik dalam git. Oleh karena itu, kita harus menyeleseikannya, salah satunya dengan mergetool.
+
+1. git mergetool
+
+2. Pindah ke baris yang terdapat konflik
+
+3. Pilih salah satu perintah:
+:diffg RE #Apabila kita pilih perubahan baris dari branch Remote
+:diffg BA #Apabila kita pilih perubahan baris dari branch Base
+:diffg LO #Apabila kita pilih perubahan baris dari branch Local
+
+4. Save file dengan perintah :wqa
+
+5. git commit -m "merged file"
+
+**Bagaimana Anda bisa menyalin commit yang dibuat di satu branch ke branch lain (misalnya branch perbaikan hotfix dari cabang yang release ke cabang development saat ini)?
+Misalkan, kita punya branch dev dan branch release.
+1. git checkout release
+2. git cherry-pick <commit> , di mana <commit> ini yang ingin kita salin dari branch dev ke branch release
+
+**Bagaimana fungsi dari git hooks
+Setiap repositori Git memiliki folder .git/hooks dengan script untuk setiap hook yang dapat kita ikat. Kita bebas untuk mengubah atau memperbarui script ini seperlunya, dan Git akan mengeksekusinya saat kejadian tersebut terjadi.
+
+**Apa perbedaan antara git pull dan git fetch?
+git fetch adalah perintah yang memberi tahu git lokal kita untuk mengambil info metadata terbaru dari aslinya (namun tidak melakukan transfer file apa pun. Ini lebih seperti hanya memeriksa untuk melihat apakah ada perubahan yang tersedia).
+git pull di sisi lain melakukan itu DAN membawa (menyalin) perubahan tersebut dari repositori jarak jauh ke repositori lokal kita.
+
+**Jelaskan fungsi dari tag meta dalam HTML
+Tag <meta> mendefinisikan metadata tentang dokumen HTML. Metadata adalah data (informasi) tentang data. Tag <meta> selalu masuk ke dalam elemen <head>, dan biasanya digunakan untuk menentukan kumpulan karakter, deskripsi halaman, kata kunci, penulis dokumen, dan pengaturan viewport.
+
+**Apa perbedaan antara Span dan div
+Div adalah elemen level blok dan span adalah elemen inline.
+Div harus digunakan untuk membungkus bagian dari dokumen, sementara span digunakan untuk membungkus sebagian kecil teks, gambar, dll.
+
+**Jelaskan perbedaan antara block element dan inline element
+Elemen level blok selalu dimulai di baris baru.
+Elemen level blok selalu mengambil lebar penuh yang tersedia (membentang ke kiri dan kanan sejauh mungkin).
+Elemen level blok memiliki margin atas dan bawah, sedangkan elemen inline tidak.
+Elemen inline tidak dimulai di baris baru.
+Elemen inline hanya membutuhkan lebar yang mereka butuhkan.
+
+**Jelaskan perbedaan antara cookie, session, dan localStorage dan sessionStorage
+cookie adalah file teks yang disimpan di komputer klien dan berfungsi untuk pelacakan penggunaan. Script server mengirimkan sekumpulan cookie ke browser. Misalnya nama, usia, atau nomor identifikasi dll. Browser menyimpan informasi ini di komputer lokal untuk digunakan di masa mendatang.
+session membuat file di direktori sementara di server tempat variabel sesi terdaftar dan nilainya disimpan. Data ini akan tersedia untuk semua halaman di situs selama kunjungan tersebut. Sesi berakhir ketika pengguna menutup browser atau setelah meninggalkan situs, server akan menghentikan sesi setelah jangka waktu yang telah ditentukan, biasanya durasi 30 menit. Ketika lain kali browser mengirimkan permintaan apa pun ke server web, maka ia mengirimkan informasi cookie itu ke server dan server menggunakan informasi itu untuk mengidentifikasi pengguna.
+localStorage adalah cara untuk menyimpan data di komputer klien. Ini memungkinkan penyimpanan pasangan kunci / nilai di browser web dan menyimpan data tanpa tanggal kedaluwarsa. localStorage hanya dapat diakses melalui JavaScript, dan HTML5. Namun, pengguna memiliki kemampuan untuk menghapus data / cache browser untuk menghapus semua data Penyimpanan lokal.
+sessionStorage: cara menyimpan data hanya untuk satu sesi, artinya data tersebut disimpan hingga browser (atau tab) ditutup; data tidak pernah ditransfer ke server; hanya dapat dibaca di sisi klien; batas penyimpanan sekitar 5-10MB; membuka banyak tab / jendela dengan URL yang sama membuat sessionStorage untuk setiap tab / jendela.
+
+**Apa itu WebP?
+WebP adalah format gambar modern yang memberikan kompresi lossless dan lossy superior untuk gambar di web. Dengan menggunakan WebP, webmaster dan pengembang web dapat membuat gambar yang lebih kecil dan lebih kaya yang membuat web lebih cepat.
+Gambar lossless WebP berukuran 26% lebih kecil dibandingkan dengan PNG. Gambar lossy WebP berukuran 25-34% lebih kecil daripada gambar JPEG yang sebanding pada indeks kualitas SSIM yang setara.
+Lossless WebP mendukung transparansi (juga dikenal sebagai saluran alfa) dengan biaya hanya 22% byte tambahan. Jika kompresi RGB lossy dapat diterima, WebP lossy juga mendukung transparansi, biasanya menyediakan ukuran file 3x lebih kecil dibandingkan dengan PNG.
+
+**Sebutkan fitur-fitur penting dari HTML5
+1. Menggunakan HTML5 membantu menghilangkan sebagian besar tag div dan menggantinya dengan elemen semantik. Para desainer menggunakan kode yang bersih dan lebih rapi.
+2. Buat pemahaman yang lebih detail tentang struktur halaman dengan bantuan HTML5.
+3. HTML5 dengan fitur dan standar barunya membuat aplikasi lebih mudah dengan front-end yang mudah, alat seret dan lepas, wiki, papan diskusi, dan elemen berguna lainnya. Manfaatkan fitur-fitur ini dalam aplikasi.
+4. Berbagi informasi dengan orang-orang di mana Anda berada di dunia dengan bantuan Geolocation. Berbagai cara untuk mengetahuinya - alamat IP, koneksi jaringan nirkabel, menara seluler yang digunakan ponsel Anda untuk berbicara atau perangkat keras GPS khusus untuk menghitung lintang dan bujur dari informasi yang dikirim oleh satelit. Dengan API Geolokasi HTML5 baru membuat lokasi langsung tersedia untuk aplikasi berbasis browser yang kompatibel dengan HTML5.
+5. HTML5 memberikan solusi yang lebih cerdas untuk menentukan file yang harus disimpan dalam cache browser. Halaman dapat dimuat dengan benar bahkan saat offline.
+6. Dalam kasus pengurangan ukuran cookie, dengan HTML5 dapat digunakan sessionStorage dan localStorage. Simpan data terstruktur untuk sementara, bukan secara permanen.
+7. Kode standar elemen HTML5 meningkatkan nilai semantik halaman web. Dengan tag khusus untuk header, nav, footer dll, para desainer mengetahui arti dan tujuan dari keseluruhan format.
+8. Manfaat utama HTML5 mencakup formulir yang elegan, peningkatan antarmuka pengguna, pengurangan kebutuhan JavaScript, dan validasi formulir asli HTML.
+9. Cari konsistensi yang lebih baik dengan mengadopsi HTML5 untuk membuat kode halaman web di satu situs dibandingkan dengan yang lain. Anda dapat dengan mudah memahami bagaimana halaman web disusun dan memudahkan desainer.
+10. HTML5 memiliki banyak fitur termasuk <video>, <audio>, grafik, gambar berkualitas tinggi, animasi serta integrasi konten SVG. Mudah untuk mengintegrasikan konten multimedia dan grafis ke web tanpa menggunakan flash dan penyumbatan pihak ketiga. Nilai semantik dokumen dapat diperkaya dengan elemen baru seperti <section>, <article>, <header>, <nav> dan banyak lagi.
 
 Apa perbedaan '==' dan '===' di dalam javascript
 Jelaskan Null dan Undefined di JavaScript
