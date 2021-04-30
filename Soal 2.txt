@@ -1,8 +1,136 @@
 **Tulis sebuah fungsi untuk memeriksa apakah suatu bilangan adalah hasil 2 pangkat. Contoh: Untuk masukan n = 4 keluarannya adalah 1 (betul), untuk n = 128 keluarannya adalah 1 (betul), tetapi untuk masukan n = 5 keluarannya adalah 0 (salah).
-https://jsfiddle.net/rescenic/9Lhb4ya0/10/
+https://jsfiddle.net/rescenic/ybwzeudr/
+
+<script>
+// Fungsi untuk mengecek apakah
+// x adalah hasil pangkat 2 
+	function cekPangkatDua(n)
+	{
+		if (n == 0)
+			return false;
+
+		return parseInt( (Math.ceil((Math.log(n) / Math.log(2))))) == parseInt( (Math.floor(((Math.log(n) / Math.log(2))))));
+	}
+
+// Test fungsi cekPangkatDua
+	document.write("Apakah 4 merupakan hasil dari pangkat 2? <br/>")
+	if (cekPangkatDua(4))
+		document.write("1 (betul)<br/>");
+	else
+		document.write("0 (salah)<br/>");
+    
+    document.write("Apakah 128 merupakan hasil dari pangkat 2? <br/>")
+	if (cekPangkatDua(128))
+        document.write("1 (betul)<br/>");
+	else
+        document.write("0 (salah)<br/>");
+    
+    document.write("Apakah 5 merupakan hasil dari pangkat 2? <br/>")
+    if (cekPangkatDua(5))
+        document.write("1 (betul)<br/>");
+	else
+        document.write("0 (salah)<br/>");
+
+</script>
+
 
 **Temukan angka terbesar kedua dalam sebuah array dari n angka. Contoh : Untuk n = 5 dan inputVector = [0, 12, 17, 3, 1], outputnya adalah 12.
+https://jsfiddle.net/rescenic/bzmn4v8f/
+
+<script>
+  
+// Mengecek elemen terbesar kedua
+   
+    // Fungsi untuk mencetak elemen terbesar kedua
+    function print2largest(inputVector, inputVector_size) {
+        let n;
+        let largest = second = -2454635434;
+   
+        // Minimal 2 elemen
+        if (inputVector_size < 2) {
+            document.write(" Invalid Input ");
+            return;
+        }
+   
+        // Mencari elemen terbesar
+        for (n = 0;n<inputVector_size;n++){
+            if (inputVector[n]>largest){
+                largest = inputVector[n];
+            }
+        }
+   
+        // Mencari elemen terbesar kedua
+        for (n = 0 ;n<inputVector_size;n++){
+            if (inputVector[n]>second && inputVector[n]<largest){
+                second = inputVector[n];
+            }
+        }
+  
+        if (second == -2454635434){
+             
+        document.write("Tidak ada elemen terbesar kedua<br>");
+        }
+        else{
+            document.write("Elemen terbesar kedua adalah " + second);
+                return;
+            }
+        }
+     
+   
+    // Cek Nilai Terbesar Kedua
+  
+    let inputVector= [ 0, 12, 17, 3, 1 ];
+    let n = inputVector.length;
+    print2largest(inputVector, n);
+   
+</script>
 
 **Temukan angka yang berulang dalam array. Contoh: Untuk n = 12 dan arr = [9, 31, 38, 5, 62, 44, 38, 17, 19, 38, 50, 74], outputnya adalah 38.
+https://jsfiddle.net/rescenic/jsvbo4dc/
+
+<script>
+//Cek elemen yang berulang
+
+	function mostFrequent(arr, n)
+	{
+		
+		// Sortir array
+		arr.sort();
+		
+		// Cari frekuensi maks menggunakan linear traversal
+		let max_count = 1, res = arr[0];
+		let curr_count = 1;
+		
+		for (let i = 1; i < n; i++)
+		{
+			if (arr[i] == arr[i - 1])
+				curr_count++;
+			else
+			{
+				if (curr_count > max_count)
+				{
+					max_count = curr_count;
+					res = arr[i - 1];
+				}
+				curr_count = 1;
+			}
+		}
+	
+		// Cek jika elemen terakhir itu paling sering
+		if (curr_count > max_count)
+		{
+			max_count = curr_count;
+			res = arr[n - 1];
+		}
+		return res;
+	}
+	
+// Tes fungsi cek elemen berulang
+
+		let arr = [9, 31, 38, 5, 62, 44, 38, 17, 19, 38, 50, 74];
+		let n = arr.length;
+		document.write(mostFrequent(arr,n));
+
+</script>
 
 **Lihat gambar berikut untuk pertanyaan, gunakan bahasa pemrograman typescript / php untuk menyelesaikannya
