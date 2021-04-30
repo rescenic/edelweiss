@@ -1,4 +1,8 @@
-Tulis sebuah fungsi untuk memeriksa apakah suatu bilangan adalah hasil 2 pangkat. Contoh: Untuk masukan n = 4 keluarannya adalah 1 (betul), untuk n = 128 keluarannya adalah 1 (betul), tetapi untuk masukan n = 5 keluarannya adalah 0 (salah).
-Temukan angka terbesar kedua dalam sebuah array dari n angka. Contoh : Untuk n = 5 dan inputVector = [0, 12, 17, 3, 1], outputnya adalah 12.
-Temukan angka yang berulang dalam array. Contoh: Untuk n = 12 dan arr = [9, 31, 38, 5, 62, 44, 38, 17, 19, 38, 50, 74], outputnya adalah 38.
-Lihat gambar berikut untuk pertanyaan, gunakan bahasa pemrograman typescript / php untuk menyelesaikannya
+**Tulis sebuah fungsi untuk memeriksa apakah suatu bilangan adalah hasil 2 pangkat. Contoh: Untuk masukan n = 4 keluarannya adalah 1 (betul), untuk n = 128 keluarannya adalah 1 (betul), tetapi untuk masukan n = 5 keluarannya adalah 0 (salah).
+https://jsfiddle.net/rescenic/9Lhb4ya0/10/
+
+**Temukan angka terbesar kedua dalam sebuah array dari n angka. Contoh : Untuk n = 5 dan inputVector = [0, 12, 17, 3, 1], outputnya adalah 12.
+
+**Temukan angka yang berulang dalam array. Contoh: Untuk n = 12 dan arr = [9, 31, 38, 5, 62, 44, 38, 17, 19, 38, 50, 74], outputnya adalah 38.
+
+**Lihat gambar berikut untuk pertanyaan, gunakan bahasa pemrograman typescript / php untuk menyelesaikannya
