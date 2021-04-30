@@ -1,0 +1,63 @@
+1. Bagaimana mengembalikan git commit yang telah di-push dan telah publik
+git revert <bad commit-hash>
+git push
+
+2. Bagaimana melakukan squash commit N terakhir menjadi satu commit?
+git rebase --interactive <commit-hash>
+ketik s (squash) untuk commit yang ingin disatukan
+:wq
+
+3. Apa itu konflik di git dan bagaimana cara mengatasinya?
+
+4. Bagaimana Anda bisa menyalin commit yang dibuat di satu branch ke branch lain (misalnya branch perbaikan hotfix dari cabang yang release ke cabang development saat ini)?
+
+5. Bagaimana fungsi dari git hooks
+
+6. Apa perbedaan antara git pull dan git fetch?
+
+Jelaskan fungsi dari tag meta dalam HTML
+Apa perbedaan antara Span dan div
+Jelaskan perbedaan antara block element dan inline element
+Jelaskan perbedaan antara cookie, session, dan localStorage dan sessionStorage
+Apa itu WebP?
+Sebutkan fitur-fitur penting dari HTML5
+
+Apa perbedaan '==' dan '===' di dalam javascript
+Jelaskan Null dan Undefined di JavaScript
+Apa fungsi dari 'use strict' di javascript
+Apa perbedaan var, let dan const di Javascript
+Jelaskan perbedaan penggunaan foo antara function foo () {} dan var foo = function () {}
+Jelaskan Inheritance Prototype di JavaScript?
+Jelaskan perbedaan .forEach dengan .map()
+jelaskan maksud keyword async dan await
+
+Jelaskan tiga cara utama untuk menerapkan gaya CSS ke halaman web
+Perbedaaan penggunaan css flexbox dan grid
+Jelaskan floats dan bagaimana cara kerjanya
+Apa itu Sass
+Apa perbedaan antara elemen yang diposisikan secara relative, fixed, absolute, dan static?
+Bagaimana untuk mengoptimalkan tampilan halaman web untuk print dengan css?
+Jelaskan perbedaan antara membuat kode situs web menjadi responsif versus menggunakan strategi mobile-first ?
+Jelaskan tentang z-index
+
+Apa nama CLI di laravel
+Jelaskan tentang Migrasi di Laravel
+Apa itu Model Eloquent?
+Bagaimana Anda melakukan soft delete?
+Sebutkan jenis hubungan model (relationship) yang tersedia di Laravel Eloquent?
+Apa CLI di Laravel yang dipakai untuk improve router performance
+Tuliskan validasi rule di laravel yang digunakan untuk mengecek apakah sebuah nilai telah ada(exist) di database
+Apa fungsi dari View Composer di Laravel
+Apa kegunaan method di eloquent model di bawah ini?
+Captionless Image
+jelaskan fungsi dari Eloquent Model Observer
+
+Jelaskan perbedaan Class & Object
+Terangkan konsep OOP dari Abstraction, Encapsulation, Inheritance, Polymorphism
+Apa fungsi constructor di dalam sebuah class
+Jelaskan yang dimaksud dengan abstract Class
+Sebutkan dan jelaskan access modifier di dalam konsep OOP
+Jelaskan yang di maksud dengan method overriding
+Jelaskan mengenai istilah dari Base class, Sub Class dan Super Class
+Apa itu exception dan exception handling
+jelaskan fungsi dari try / catch dan finally
