@@ -101,6 +101,15 @@ foreach($mata_pelajaran as $x => $x_value) {
     echo "<br>";
 }
 
+echo "<br/> 3. Kelas yang diurutkan dengan siswa terbaik: <br/>";
+$bestclass = array("4. A"=>"2.5", "1. C"=>"3", "2. B"=>"2");
+asort($bestclass);
+
+foreach($bestclass as $x => $x_value) {
+    echo $x . " - " . $x_value;
+    echo "<br>";
+}
+
 ?>
 </body>
 
