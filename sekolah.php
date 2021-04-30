@@ -81,6 +81,18 @@ echo "<br /> Siswa yang bernama " . $siswa_5->getnama() . " memiliki no. id " .$
 
 echo "<br /> Siswa yang bernama " . $siswa_6->getnama() . " memiliki no. id " .$siswa_6->getid() . " dan berusia " . $siswa_6->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_2->id_kelas . ". <br/><br/>";
 
+echo "1. Mengurutkan siswa berdasarkan nilai rata-rata mereka: <br/>";
+
+$avgscore = array("Ridwan"=>"5", "Maulana"=>"2.5", "Hakim"=>"4.5", "Alice"=>"1.5", "Bob"=>"2", "Tandai"=>"3.5");
+asort($avgscore);
+  
+foreach($avgscore as $x => $x_value) {
+    echo $x . " - " . $x_value;
+    echo "<br>";
+}
+
+echo "2. ";
+
 ?>
 </body>
 
