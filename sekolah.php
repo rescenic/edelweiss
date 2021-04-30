@@ -83,15 +83,23 @@ echo "<br /> Siswa yang bernama " . $siswa_6->getnama() . " memiliki no. id " .$
 
 echo "1. Mengurutkan siswa berdasarkan nilai rata-rata mereka: <br/>";
 
-$avgscore = array("Ridwan"=>"5", "Maulana"=>"2.5", "Hakim"=>"4.5", "Alice"=>"1.5", "Bob"=>"2", "Tandai"=>"3.5");
-asort($avgscore);
-  
-foreach($avgscore as $x => $x_value) {
+$grade = array("Ridwan"=>"5", "Maulana"=>"2.5", "Hakim"=>"4.5", "Alice"=>"1.5", "Bob"=>"2", "Tandai"=>"3.5");
+asort($grade);
+
+foreach($grade as $x => $x_value) {
     echo $x . " - " . $x_value;
     echo "<br>";
 }
 
-echo "2. ";
+echo "<br/> 2. Mata pelajaran yang diurutkan berdasarkan rata-rata nilai yang diberikan kepada siswa: <br/>";
+
+$mata_pelajaran = array("Bahasa Inggris"=>"2.95", "Sejarah"=>"1.5", "Fisika"=>"2.5", "Matematika"=>"3", "Bahasa Jerman"=>"4", "Olahraga"=>"5");
+arsort($mata_pelajaran);
+
+foreach($mata_pelajaran as $x => $x_value) {
+    echo $x . " - " . $x_value;
+    echo "<br>";
+}
 
 ?>
 </body>
