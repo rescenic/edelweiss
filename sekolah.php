@@ -59,19 +59,27 @@ class Grade {
     public $grade;
 }
 
-$kelas_satu = new Kelas();
-$kelas_dua = new Kelas();
+$kelas_1 = new Kelas();
+$kelas_2 = new Kelas();
 
-$siswa_satu = new Siswa("Ridwan");
-$siswa_dua = new Siswa("Maulana");
-$siswa_tiga = new Siswa("Hakim");
+$siswa_1 = new Siswa("Ridwan");
+$siswa_2 = new Siswa("Maulana");
+$siswa_3 = new Siswa("Hakim");
+$siswa_4 = new Siswa("Alice");
+$siswa_5 = new Siswa("Bob");
+$siswa_6 = new Siswa("Tandal");
 
+echo "<br /> Siswa yang bernama " . $siswa_1->getnama() . " memiliki no. id " .$siswa_1->getid() . " dan berusia " . $siswa_1->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_1->id_kelas . ". <br/><br/>";
 
-echo "<br /> Siswa yang bernama " . $siswa_satu->getnama() . " memiliki no. id " .$siswa_satu->getid() . " dan berusia " . $siswa_satu->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
+echo "<br /> Siswa yang bernama " . $siswa_2->getnama() . " memiliki no. id " .$siswa_2->getid() . " dan berusia " . $siswa_2->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_1->id_kelas . ". <br/><br/>";
 
-echo "<br /> Siswa yang bernama " . $siswa_dua->getnama() . " memiliki no. id " .$siswa_dua->getid() . " dan berusia " . $siswa_dua->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
+echo "<br /> Siswa yang bernama " . $siswa_3->getnama() . " memiliki no. id " .$siswa_3->getid() . " dan berusia " . $siswa_3->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_1->id_kelas . ". <br/><br/>";
 
-echo "<br /> Siswa yang bernama " . $siswa_tiga->getnama() . " memiliki no. id " .$siswa_tiga->getid() . " dan berusia " . $siswa_tiga->getumur() . " tahun.Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
+echo "<br /> Siswa yang bernama " . $siswa_4->getnama() . " memiliki no. id " .$siswa_4->getid() . " dan berusia " . $siswa_4->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_2->id_kelas . ". <br/><br/>";
+
+echo "<br /> Siswa yang bernama " . $siswa_5->getnama() . " memiliki no. id " .$siswa_5->getid() . " dan berusia " . $siswa_5->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_2->id_kelas . ". <br/><br/>";
+
+echo "<br /> Siswa yang bernama " . $siswa_6->getnama() . " memiliki no. id " .$siswa_6->getid() . " dan berusia " . $siswa_6->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_2->id_kelas . ". <br/><br/>";
 
 ?>
 </body>
