@@ -145,7 +145,7 @@ Setiap baris yang menggunakan await, akan ditunggu sampai Asynchronous Promise t
 **Jelaskan tiga cara utama untuk menerapkan gaya CSS ke halaman web
 1. Inline CSS. Inline CSS digunakan untuk memberi style (gaya) pada tag atau elemen HTML tertentu.
 2. Internal CSS. Internal CSS digunakan untuk memberi style yang hanya berlaku pada satu laman web. Style yang diberikan diapit oleh tag <style> </style> dan diletakkan di bagian elemen head atau tag <head> dari laman web.
-3. 3. External CSS. External CSS adalah file berekstensi .css yang hanya berisi kode-kode style. Tujuan menggunakan external CSS adalah untuk memisahkan kode style dengan struktur dan tipe konten laman web. External CSS dapat diaplikasikan pada lebih dari satu laman web sehingga semua laman web akan memiliki tampilan atau desain yang seragam.
+3. External CSS. External CSS adalah file berekstensi .css yang hanya berisi kode-kode style. Tujuan menggunakan external CSS adalah untuk memisahkan kode style dengan struktur dan tipe konten laman web. External CSS dapat diaplikasikan pada lebih dari satu laman web sehingga semua laman web akan memiliki tampilan atau desain yang seragam.
 
 **Perbedaaan penggunaan css flexbox dan grid
 CSS Grid sangat bagus dalam mengatur gambar yang besar.
@@ -157,7 +157,7 @@ Flexbox sangat baik untuk layout yang satu dimensi (kolom atau baris) .
 Float merupakan properti CSS yang bisa kita manfaatkan untuk memposisikan suatu elemen, nilai dari float sendiri adalah left, right, none, inherit. Pada tag img telah diberikan properti float:left yang berarti elemen gambar telah diposisikan disebelah kiri, kemudian teks akan mengikuti elemen gambarnya.
 
 **Apa itu Sass
-SASS(Sassy Stylesheet) sendiri memberi kemudahan seperti tidak usah menulis kurung buka /tutup, dan juga tidak perlu menulis titik koma diakhir sintaks. Dengan menggunakan SASS sendiri memudahkan kita dalam menulis CSS seperti penggunaan variabel, nesting, mixins , selector inheritance dll. Keunggulan lainnya seperti CSS yang lebih tersutruktur, rapi, mudah dipahami, dan yang paling penting dapat berjalan baik di semua browser.
+SASS (Sassy Stylesheet) sendiri memberi kemudahan seperti tidak usah menulis kurung buka /tutup, dan juga tidak perlu menulis titik koma diakhir sintaks. Dengan menggunakan SASS sendiri memudahkan kita dalam menulis CSS seperti penggunaan variabel, nesting, mixins , selector inheritance dll. Keunggulan lainnya seperti CSS yang lebih tersutruktur, rapi, mudah dipahami, dan yang paling penting dapat berjalan baik di semua browser.
 
 **Apa perbedaan antara elemen yang diposisikan secara relative, fixed, absolute, dan static?
 Value static merupakan nilai default dari position suatu element. Value static akan membuat suatu element bertumpukan.
