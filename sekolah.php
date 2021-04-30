@@ -7,12 +7,18 @@
 <body>
     <?php
 class Sekolah {
-    protected $kelas;
+    public $kelas;
 }
 
 class Kelas extends Sekolah {
-    protected $guru;
-    protected $siswa;
+    public $id_kelas;
+    public $guru;
+    public $siswa;
+    
+    function __construct(){
+        $this->id_kelas = rand (1,6); //Kelas 1 s.d. Kelas 6
+        //echo $this->id_kelas . " adalah nomor id kelas. <br />";
+    }
 }
 
 class Guru extends Kelas {
@@ -24,18 +30,17 @@ class Siswa extends Kelas {
     public $nama_siswa;
     public $umur_siswa;
 
-    function __construct(){
-        $this->id_siswa = rand (1, 30);
+    function __construct($nama_siswa){
+        $this->nama_siswa = $nama_siswa;
+        $this->id_siswa = rand (1, 20); //rentang id siswa
+        $this->umur_siswa = rand (7, 12); //rentang umur siswa
         //echo $this->id_siswa . " adalah nomor id siswa. <br />";
     }
 
-    function getNamaSiswa(){
+    function getnama(){
         return $this->nama_siswa;
     }
 
-    function getUmurSiswa(){
-        return $this->umur_siswa;
-    }
 }
 
 class Mata_Pelajaran {
@@ -46,28 +51,19 @@ class Grade {
     public $grade;
 }
 
-$siswa_satu = new Siswa();
+$kelas_satu = new Kelas();
+$kelas_dua = new Kelas();
 
-$siswa_satu->nama_siswa = "Ridwan";
-$siswa_satu->umur_siswa = 15;
+$siswa_satu = new Siswa("Ridwan");
+$siswa_dua = new Siswa("Maulana");
+$siswa_tiga = new Siswa("Hakim");
 
-$siswa_dua = new Siswa();
 
-$siswa_dua->nama_siswa = "Maulana";
-$siswa_dua->umur_siswa = 16;
+echo "<br /> Siswa yang bernama " . $siswa_satu->getnama() . " memiliki no. id " .$siswa_satu->id_siswa . " dan berusia " . $siswa_satu->umur_siswa . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
 
-$siswa_tiga = new Siswa();
+echo "<br /> Siswa yang bernama " . $siswa_dua->getnama() . " memiliki no. id " .$siswa_dua->id_siswa . " dan berusia " . $siswa_dua->umur_siswa . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
 
-$siswa_tiga->nama_siswa = "Hakim";
-$siswa_tiga->umur_siswa = 17;
-
-//print_r($siswa_satu);
-
-echo "<br /> Siswa yang bernama " . $siswa_satu->nama_siswa . " memiliki no. id " .$siswa_satu->id_siswa . " dan berusia " . $siswa_satu->umur_siswa . " tahun.<br/><br />";
-
-echo "<br /> Siswa yang bernama " . $siswa_dua->nama_siswa . " memiliki no. id " .$siswa_dua->id_siswa . " dan berusia " . $siswa_dua->umur_siswa . " tahun.<br/><br />";
-
-echo "<br /> Siswa yang bernama " . $siswa_tiga->nama_siswa . " memiliki no. id " .$siswa_tiga->id_siswa . " dan berusia " . $siswa_tiga->umur_siswa . " tahun.<br/><br />";
+echo "<br /> Siswa yang bernama " . $siswa_tiga->getnama() . " memiliki no. id " .$siswa_tiga->id_siswa . " dan berusia " . $siswa_tiga->umur_siswa . " tahun.Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
 
 ?>
 </body>
