@@ -32,7 +32,7 @@ Ketika terdapat perubahan konten file yang sama dalam branch yang berbeda, misal
 
 5. git commit -m "merged file"
 
-**Bagaimana Anda bisa menyalin commit yang dibuat di satu branch ke branch lain (misalnya branch perbaikan hotfix dari cabang yang release ke cabang development saat ini)?
+**Bagaimana Kita bisa menyalin commit yang dibuat di satu branch ke branch lain (misalnya branch perbaikan hotfix dari cabang yang release ke cabang development saat ini)?
 Misalkan, kita punya branch dev dan branch release.
 1. git checkout release
 2. git cherry-pick <commit> , di mana <commit> ini yang ingin kita salin dari branch dev ke branch release
@@ -73,50 +73,194 @@ Lossless WebP mendukung transparansi (juga dikenal sebagai saluran alfa) dengan 
 1. Menggunakan HTML5 membantu menghilangkan sebagian besar tag div dan menggantinya dengan elemen semantik. Para desainer menggunakan kode yang bersih dan lebih rapi.
 2. Buat pemahaman yang lebih detail tentang struktur halaman dengan bantuan HTML5.
 3. HTML5 dengan fitur dan standar barunya membuat aplikasi lebih mudah dengan front-end yang mudah, alat seret dan lepas, wiki, papan diskusi, dan elemen berguna lainnya. Manfaatkan fitur-fitur ini dalam aplikasi.
-4. Berbagi informasi dengan orang-orang di mana Anda berada di dunia dengan bantuan Geolocation. Berbagai cara untuk mengetahuinya - alamat IP, koneksi jaringan nirkabel, menara seluler yang digunakan ponsel Anda untuk berbicara atau perangkat keras GPS khusus untuk menghitung lintang dan bujur dari informasi yang dikirim oleh satelit. Dengan API Geolokasi HTML5 baru membuat lokasi langsung tersedia untuk aplikasi berbasis browser yang kompatibel dengan HTML5.
+4. Berbagi informasi dengan orang-orang di mana Kita berada di dunia dengan bantuan Geolocation. Berbagai cara untuk mengetahuinya - alamat IP, koneksi jaringan nirkabel, menara seluler yang digunakan ponsel Kita untuk berbicara atau perangkat keras GPS khusus untuk menghitung lintang dan bujur dari informasi yang dikirim oleh satelit. Dengan API Geolokasi HTML5 baru membuat lokasi langsung tersedia untuk aplikasi berbasis browser yang kompatibel dengan HTML5.
 5. HTML5 memberikan solusi yang lebih cerdas untuk menentukan file yang harus disimpan dalam cache browser. Halaman dapat dimuat dengan benar bahkan saat offline.
 6. Dalam kasus pengurangan ukuran cookie, dengan HTML5 dapat digunakan sessionStorage dan localStorage. Simpan data terstruktur untuk sementara, bukan secara permanen.
 7. Kode standar elemen HTML5 meningkatkan nilai semantik halaman web. Dengan tag khusus untuk header, nav, footer dll, para desainer mengetahui arti dan tujuan dari keseluruhan format.
 8. Manfaat utama HTML5 mencakup formulir yang elegan, peningkatan antarmuka pengguna, pengurangan kebutuhan JavaScript, dan validasi formulir asli HTML.
-9. Cari konsistensi yang lebih baik dengan mengadopsi HTML5 untuk membuat kode halaman web di satu situs dibandingkan dengan yang lain. Anda dapat dengan mudah memahami bagaimana halaman web disusun dan memudahkan desainer.
+9. Cari konsistensi yang lebih baik dengan mengadopsi HTML5 untuk membuat kode halaman web di satu situs dibandingkan dengan yang lain. Kita dapat dengan mudah memahami bagaimana halaman web disusun dan memudahkan desainer.
 10. HTML5 memiliki banyak fitur termasuk <video>, <audio>, grafik, gambar berkualitas tinggi, animasi serta integrasi konten SVG. Mudah untuk mengintegrasikan konten multimedia dan grafis ke web tanpa menggunakan flash dan penyumbatan pihak ketiga. Nilai semantik dokumen dapat diperkaya dengan elemen baru seperti <section>, <article>, <header>, <nav> dan banyak lagi.
 
-Apa perbedaan '==' dan '===' di dalam javascript
-Jelaskan Null dan Undefined di JavaScript
-Apa fungsi dari 'use strict' di javascript
-Apa perbedaan var, let dan const di Javascript
-Jelaskan perbedaan penggunaan foo antara function foo () {} dan var foo = function () {}
-Jelaskan Inheritance Prototype di JavaScript?
-Jelaskan perbedaan .forEach dengan .map()
-jelaskan maksud keyword async dan await
+**Apa perbedaan '==' dan '===' di dalam javascript
+2 == "2"; // betul
+2 === "2"; // salah
 
-Jelaskan tiga cara utama untuk menerapkan gaya CSS ke halaman web
-Perbedaaan penggunaan css flexbox dan grid
-Jelaskan floats dan bagaimana cara kerjanya
-Apa itu Sass
-Apa perbedaan antara elemen yang diposisikan secara relative, fixed, absolute, dan static?
-Bagaimana untuk mengoptimalkan tampilan halaman web untuk print dengan css?
-Jelaskan perbedaan antara membuat kode situs web menjadi responsif versus menggunakan strategi mobile-first ?
-Jelaskan tentang z-index
+0 == false; // betul
+0 === false; // salah
 
-Apa nama CLI di laravel
-Jelaskan tentang Migrasi di Laravel
-Apa itu Model Eloquent?
-Bagaimana Anda melakukan soft delete?
-Sebutkan jenis hubungan model (relationship) yang tersedia di Laravel Eloquent?
-Apa CLI di Laravel yang dipakai untuk improve router performance
-Tuliskan validasi rule di laravel yang digunakan untuk mengecek apakah sebuah nilai telah ada(exist) di database
-Apa fungsi dari View Composer di Laravel
-Apa kegunaan method di eloquent model di bawah ini?
-Captionless Image
-jelaskan fungsi dari Eloquent Model Observer
+1 == true; // betul
+1 === false; // salah
+2 == true; // salah... ingat, salah
 
-Jelaskan perbedaan Class & Object
-Terangkan konsep OOP dari Abstraction, Encapsulation, Inheritance, Polymorphism
-Apa fungsi constructor di dalam sebuah class
-Jelaskan yang dimaksud dengan abstract Class
-Sebutkan dan jelaskan access modifier di dalam konsep OOP
-Jelaskan yang di maksud dengan method overriding
-Jelaskan mengenai istilah dari Base class, Sub Class dan Super Class
-Apa itu exception dan exception handling
-jelaskan fungsi dari try / catch dan finally
+undefined == null; // betul
+undefined === null; // salah
+Jadi, perbedaan antara == dan === adalah:
+
+Pada operasi ==, javascript mengubah tipe dari nilai variabel ketika terjadi perbandingan.
+
+Sementara operasi === tidak mengubah tipe dari nilai variabel ketika terjadi perbandingan.
+
+Jadi, 3 == "3" itu bernilai benar, karena ketika terjadi proses perbandingan, "3" diubah menjadi bentuk Integer, yaitu 3. Oleh karena itu, perbandingan yang terjadi pasca perubahan tipe nilai adalah 3 == 3.
+
+Bagaimana dengan 0 == false? Yang diubah adalah nilai Boolean, dimana ia diubah menjadi bentuk Integer. true akan diubah menjadi 1, sementara false menjadi 0.
+
+**Jelaskan Null dan Undefined di JavaScript
+null artinya memiliki nilai kosong atau tidak ada. null harus diganti (dengan nilai lain yang valid).
+Undefined secara umum berarti variabel tersebut sudah dideklarasi, tapi belum didefinisikan (belum diberi nilai).
+
+**Apa fungsi dari 'use strict' di javascript
+Dengan perintah use strict sebelum menulis baris kode yang lain setelahnya, akan memerintahkan javascript untuk menterjemahkan kode yang kita tulis harus dalam keadaan ketat/teliti.
+
+**Apa perbedaan var, let dan const di Javascript
+var, let dan const ini memiliki pendekatan berbeda untuk Assignment, Hoisting dan Scope.
+Perbedaan yang paling mendasar adalah bahwa let dan var dapat ubah isinya kembali sementara const tidak bisa.
+Variabel yang dideklarasikan menggunakan var selalu dinaikkan ke bagian atas ruang lingkup masing-masing, sedangkan variabel yang dideklarasikan menggunakan const dan biarkan tidak dinaikkan. Dengan demikian, var bisa lebih rentan terhadap kesalahan, seperti penugasan kembali (diubah isinya) yang tidak disengaja.
+Sementara var adalah function-scoped, let dan const adalah block-scoped: secara umum, blok adalah kode apa pun dalam kurung kurawal {}, termasuk fungsi, pernyataan kondisional, dan loop.
+
+**Jelaskan perbedaan penggunaan foo antara function foo () {} dan var foo = function () {}
+Function declarations atau yang dikenal juga sebagai function statements adalah fungsi yang telah dideklarasikan sebelumnya dan akan dieksekusi jika dipanggil (call).
+Function declarations harus dimulai dengan kata function.
+Function expressions adalah fungsi yang disimpan ke dalam suatu variable. Setelah disimpan, maka variabel tersebut dapat digunakan sebagai fungsi. Fungsi yang disimpan di dalam function expressions dapat diberi nama atau dengan kata lain Named Function Expressions (NFEs) ataupun tidak diberi nama sama sekali (anonymous).
+Function declarations dapat ditaruh di mana saja di dalam script. Karena Javascript Interpreter yang ada di dalam browser membaca script sebelum menjalakan apapun, lalu menyimpannya ke dalam memory. Jadi kita dapat memanggil fungsi foo bahkan sebelum fungsi foo tersebut dideklarasikan seperti contoh di atas.
+Sebaliknya, function expressions akan dibuat jika Javascript Interpreter telah melewati baris kode di mana function expressions dideklarasikan. Baru setelah baris kode tersebut dilewati, kita dapat mengeksekusi function expressions tersebut.
+
+**Jelaskan Inheritance Prototype di JavaScript?
+Dalam JavaScript, objek memiliki properti tersembunyi khusus [[Prototype]] (seperti disebutkan dalam spesifikasi), yang berupa null atau mereferensikan objek lain. Objek itu disebut "prototype".
+Saat kita membaca properti dari objek, dan properti itu hilang, JavaScript secara otomatis mengambilnya dari prototype. Dalam pemrograman, hal seperti itu disebut “Inheritance Prototype”. Dan segera kita akan mempelajari banyak contoh warisan tersebut, serta fitur bahasa keren yang dibangun di atasnya. Properti [[Prototype]] bersifat internal dan tersembunyi, tetapi ada banyak cara untuk menyetelnya.
+Dalam pemrograman, kita sering ingin mengambil sesuatu dan mengembangkannya.
+Misalnya, kita memiliki objek `pengguna` dengan properti dan metodenya, dan ingin menjadikan `admin` dan `tamu` sebagai varian yang sedikit dimodifikasi. Kita ingin menggunakan kembali apa yang kami miliki di `pengguna`, bukan menyalin / menerapkan kembali metodenya, cukup buat objek baru di atasnya. Inheritance Prototype adalah fitur bahasa yang membantu dalam hal itu.
+
+**Jelaskan perbedaan .forEach dengan .map()
+Pada dasarnya map() method menghasilkan array baru dari hasil masing2 elemen array yang diaplikasikan pada fungsi map itu sendiri, tanpa merubah array aslinya. dan method ini punya return value sehingga bisa di terapkan pada sebuah variabel.
+Sedangkan forEach() method hanya menjalankan sebuah fungsi sebanyak jumlah elemen array dengan variabel masing2 elemen itu sendiri. dan method ini tidak memiliki return value.
+
+**Jelaskan maksud keyword async dan await
+Async/Await adalah salah satu cara untuk mengatasai masalah asynchronous pada Javascript selain menggunakan callback dan promise.
+Untuk menggunakan Async/Await, kembalian dari suatu fungsi harus merupakan suatu Promise. Async/Await tidak dapat berdiri tanpa adanya Promise.
+Tidak seperti Promise, dengan Async/Await maka suatu baris kode dapat tersusun rapi mirip dengan kode yang sifatnya synchronous.
+Pada implementasi Async/Await, kita menggunakan kata kunci async sebelum fungsi. Await sendiri hanya bisa digunakan pada fungsi yang menggunakan async.
+Fungsi yang menggunakan async, sebenarnya mempunyai kembalian berupa promise. Tetapi, Async/Await tidak dapat digunakan di top level kode kita, karena harus dibungkus oleh suatu fungsi.
+Setiap baris yang menggunakan await, akan ditunggu sampai Asynchronous Promise tersebut di resolve.
+
+**Jelaskan tiga cara utama untuk menerapkan gaya CSS ke halaman web
+1. Inline CSS. Inline CSS digunakan untuk memberi style (gaya) pada tag atau elemen HTML tertentu.
+2. Internal CSS. Internal CSS digunakan untuk memberi style yang hanya berlaku pada satu laman web. Style yang diberikan diapit oleh tag <style> </style> dan diletakkan di bagian elemen head atau tag <head> dari laman web.
+3. 3. External CSS. External CSS adalah file berekstensi .css yang hanya berisi kode-kode style. Tujuan menggunakan external CSS adalah untuk memisahkan kode style dengan struktur dan tipe konten laman web. External CSS dapat diaplikasikan pada lebih dari satu laman web sehingga semua laman web akan memiliki tampilan atau desain yang seragam.
+
+**Perbedaaan penggunaan css flexbox dan grid
+CSS Grid sangat bagus dalam mengatur gambar yang besar.
+CSS Grid digunakan untuk layout yang berdua dimensi (kolom dan baris).
+Flexbox sangat bagus dalam mengatur perataan tiap elemen. Digunakan dalam memposisikan elemen yang lebih kecil atau detail.
+Flexbox sangat baik untuk layout yang satu dimensi (kolom atau baris) .
+
+**Jelaskan floats dan bagaimana cara kerjanya
+Float merupakan properti CSS yang bisa kita manfaatkan untuk memposisikan suatu elemen, nilai dari float sendiri adalah left, right, none, inherit. Pada tag img telah diberikan properti float:left yang berarti elemen gambar telah diposisikan disebelah kiri, kemudian teks akan mengikuti elemen gambarnya.
+
+**Apa itu Sass
+SASS(Sassy Stylesheet) sendiri memberi kemudahan seperti tidak usah menulis kurung buka /tutup, dan juga tidak perlu menulis titik koma diakhir sintaks. Dengan menggunakan SASS sendiri memudahkan kita dalam menulis CSS seperti penggunaan variabel, nesting, mixins , selector inheritance dll. Keunggulan lainnya seperti CSS yang lebih tersutruktur, rapi, mudah dipahami, dan yang paling penting dapat berjalan baik di semua browser.
+
+**Apa perbedaan antara elemen yang diposisikan secara relative, fixed, absolute, dan static?
+Value static merupakan nilai default dari position suatu element. Value static akan membuat suatu element bertumpukan.
+Value relative digunakan untuk membuat suatu element bisa dipindah pindahkan . By default elemen memang tumpukan sebagaimana pada value static, tetapi kita bisa memindahkan elemen tersebut dengan property seperti top , left. Sehingga elemen tersebut akan menindihi layernya elemen lain.
+Value absolute digunakan untuk membuat suatu elemen bisa dipindahkan dan membuat elemen mengambang ke atas dibanding element lain. Bedanya dengan property relative, pada property absolute layer bawahnya akan bergeser seolah olah berada di bawah layer dengan property relative.
+Value fixed digunakan untuk membuat elemen mengambang di antara elemen elemen lain dan juga bisa dipindahkan posisinya. Property ini mirip dengan property absolute. Bedanya dengan property absolute adalah property dengan value fixed posisinya akan tetap berada di posisinya terhadap layar meskin layar page scroll.
+
+**Bagaimana untuk mengoptimalkan tampilan halaman web untuk print dengan css?
+Apabila sumber daya CSS eksternal berukuran kecil, Kita dapat langsung memasukkannya ke dalam dokumen HTML, yang disebut inlining. Membuat CSS kecil menjadi inline dengan cara ini memungkinkan browser melanjutkan proses perenderan halaman. Harap diingat jika file CSS berukuran besar, membuat CSS sepenuhnya menjadi inline dapat menyebabkan PageSpeed Insights memperingatkan bahwa bagian paruh atas halaman terlalu besar melalui Prioritaskan Konten Terlihat. Apabila file CSS berukuran besar, Kita perlu mengidentifikasi dan menyebariskan CSS yang dibutuhkan untuk merender konten paruh atas dan menunda pemuatan gaya yang tersisa sampai sesudah konten paruh atas.
+
+**Jelaskan perbedaan antara membuat kode situs web menjadi responsif versus menggunakan strategi mobile-first ?
+Point-point penting dalam mobile-first:
+Konten statis, tidak berubah menyesuaikan ukuran layar perangkat.
+Menggunakan navigasi dasar
+Gambar ditampilkan dalam ukuran yang lebih kecil.
+Point-point penting dalam responsive design:
+Konten dinamis dan dapat berubah
+Navigasi dioptimalkan agar bisa digunakan dengan mudah di berbagai perangkat.
+Gambar dioptimalkan untuk tampilan yang lebih rapi berbagai ukuran layar.
+
+**Jelaskan tentang z-index
+z-index dapat berfungsi untuk menentukan letak atau posisi suatu elemen, kita dapat menempatkan elemen tersebut dibawah atau diatas elemen lainnya. Maksud dibawah dan diatas ini adalah kedalaman, bukan posisi atas atau bawah dalam arti sebenarnya. Jika Kita sudah tidak asing lagi dengan yang namanya “layer” tentu Kita akan paham maksud diatas dan dibawah yang saya sebutkan diatas. Dalam bahasa lainnya adalah “ditimpa”, maksud dari “di atas” adalah menimpa gambar lainnya.
+
+**Apa nama CLI di laravel
+Artisan CLI (php artisan list)
+
+**Jelaskan tentang Migrasi di Laravel
+Migration adalah sebuah fitur di laravel yang dapat bekerja layaknya version control untuk database kalian. Dengan menggunakan migration, tim kalian dapat dengan mudah memodifikasi dan membagikan skema database yang ada di dalam sebuah projek. Jika kalian pernah menggunakan github atau gitlab, fitur ini mirip dengan kedua aplikasi tersebut, yaitu untuk mendokumentasikan setiap perubahan yang terjadi di dalam database. Alasan lain kenapa kita perlu menggunakan migration adalah untuk memudahkan tim dalam melakukan perubahan.
+Meski tidak secara spesifik ada di laravel, tapi sejatinya fitur ini telah lama diperkenalkan. Migration adalah cara lain untuk menjalankan DDL(database definiton language) tanpa perlu mengetikkan syntax sql dari terminal dan editor khusus lainnya. Mungkin cukup segitu penjelasan tentang apa itu migration, bagi kalian yang masih penasaran bisa browsing-browsing lagi artikel tentang migration, banyak sekali artikel yang membahas migration laravel dalam berbagai bahasa dan platform.
+
+**Apa itu Model Eloquent?
+Model adalah bagian dari library Eloquent, yaitu library yang membantu kita mengolah data pada aplikasi Laravel. Eloquent sudah menyediakan fitur-fitur yang luar biasa untuk mempermudah pekerjaan kita menggunakan Laravel.
+
+**Bagaimana Kita melakukan soft delete?
+Hal pertama yang harus kita lakukan adalah menambahkan field deleted_at pada tabel yang ingin kita terapkan Soft Delete.
+Kedua, php artisan migrate
+Ketiga, Selanjutnya kita panggil Trait Illuminate\Database\Eloquent\SoftDeletes di model User.
+
+**Sebutkan jenis hubungan model (relationship) yang tersedia di Laravel Eloquent?
+One to One Eloquent Relationship
+One to Many Relationship
+
+**Apa CLI di Laravel yang dipakai untuk improve router performance
+php artisan route:cache
+
+**Tuliskan validasi rule di laravel yang digunakan untuk mengecek apakah sebuah nilai telah ada(exist) di database
+'category' => 'exists:categories'
+
+**Apa fungsi dari View Composer di Laravel
+View composer merupakan fitur di laravel yang digunakan untuk share data ke beberapa view. 
+
+**Apa kegunaan method di eloquent model di bawah ini?
+Metode tersebut berfungsi sebagai accessor (getter).
+
+**Jelaskan fungsi dari Eloquent Model Observer
+Observer adalah sebuah event listener dari sebuah models. Jadi ketika sebuah model melakukan kegiatan CRUD ( create, read, update, delete ) kita bisa menambahkan sebuah proses tambahan ketika proses tersebut dipanggil. Misalnya ada seorang user yang melakukan update data password. Nah kita ingin ketika terjadi proses update, aplikasi kita mengirimkan link konfirmasi ke user tersebut untuk memverifikasi perubahan. Di kasus tersebut kita bisa memanfaatkan fungsi dari observer ini.
+
+**Jelaskan perbedaan Class & Object
+Class merupakan kumpulan dari suatu fungsi-fungsi yang dibuat untuk suatu tujuan tertentu. 
+Sedangkan Object adalah pemanfaatan dari class yang siap untuk digunakan.
+Class adalah semacam kerangka / struktur / konsep / prototype, sedangkan Object adalah Variasi Modelnya.
+
+**Terangkan konsep OOP dari Abstraction, Encapsulation, Inheritance, Polymorphism
+1. Encapsulation
+Encapsulation atau pengkapsulan adalah konsep tentang pengikatan data atau metode yang berbeda yang disatukan atau “dikapsulkan” menjadi satu unit data. Encapsulation dapat mempermudah dalam pembacaan code karena informasi yang disajikan tidak perlu dibaca secara rinci dan sudah merupakan satu kesatuan.
+2. Inheritance
+Inheritance adalah konsep OOP di mana kita dapat membentuk class baru yang “mewarisi” atau memiliki bagian-bagian dari class yang sudah ada sebelumnya. Konsep ini menggunakan sistem hirarki atau bertingkat. Seperti sebuah Drop-Down Menu yang ada di kebanyakan website, di mana semakin spesifik submenunya, semakin spesifik pula kontennya. Demikian juga dengan Inheritance OOP di mana semakin spesifik subclassnya, semakin sedikit pula komponen yang dapat diwarisi class tersebut.
+3. Abstraction
+Seperti namanya, abstract class adalah class-class yang memiliki informasi abstrak dan metode-metode dari sekumpulan data. Abstract Class tidak bisa diubah dan  berlaku juga sebagai kerangka dalam penciptaan subclass-subclassnya (berperan seperti Superclass yang dibahas di konsep Inheritance).
+Sebuah Abstract Classs memiliki informasi dan metode yang dapat diturunkan ke subclassnya, dan seluruh subclass akan mengikuti apa saja metode yang akan diturunkan oleh Abstract Class.
+4. Polymorphism
+Polymorphism adalah konsep di mana suatu objek yang berbeda-beda dapat diakses melalui interface yang sama. Sebuah objek yang polymorphic dapat beradaptasi dengan metode apapun yang diimplementasikan pada objek tersebut, dan setiap class memiliki interpretasinya tersendiri terhadap interfacenya.
+
+**Apa fungsi constructor di dalam sebuah class
+Constructor adalah method khusus yang akan dieksekusi pada saat pembuatan objek (instance). Biasanya method ini digunakan untuk inisialisasi atau mempersiapkan data untuk objek.
+
+**Jelaskan yang dimaksud dengan abstract Class
+Abstract class adalah class-class yang memiliki informasi abstrak dan metode-metode dari sekumpulan data. Abstract Class tidak bisa diubah dan  berlaku juga sebagai kerangka dalam penciptaan subclass-subclassnya (berperan seperti Superclass yang dibahas di konsep Inheritance).
+
+**Sebutkan dan jelaskan access modifier di dalam konsep OOP
+1. Public
+Property dan Mehod dapat di akses dari mana saja, bahkan dari luar class yang digunakan.
+2. Protected
+Penggunaan Method dan Property dapat di akses pada class itu sendiri maupun class turunannya, parent dan child.Property dan Method yang menggunuakan visibility protected tidak dapat di instance.
+3. Private
+Digunakan hanya untuk class tertentu atau class itu sendiri. Class ini yang sangat tertutup terhadap pemanggilan / intance method maupun property.
+
+**Jelaskan yang dimaksud dengan method overriding
+Method overriding artinya memberikan implementasi yang baru dari suatu method pada subclass, jadi method ini berada pada class yang berbeda yang terkait dalam inheritance.
+
+**Jelaskan mengenai istilah dari Base class, Sub Class dan Super Class
+Konsep inheritance membuat sebuah struktur atau hierarchy class dalam kode program. Class yang akan diturunkan bisa disebut sebagai class induk (parent class), super class, atau base class.
+Sedangkan class yang menerima penurunan bisa disebut sebagai class anak (child class), sub class, derived class atau heir class.
+Tidak semua property dan method class induk akan diturunkan. Property dan method dengan hak akses private tidak akan diturunkan kepada class anak. Hanya property dan method dengan hak akses protected dan public saja yang bisa diakses dari class anak.
+
+**Apa itu exception dan exception handling
+Secara umum, adanya kesalahan / error yang terjadi pada program pada saat runtime dapat menyebabkan program berhenti atau hang atau disebut juga exception.
+Exception Handling merupakan mekanisme yang paling diperlukan dalam menangani error yang terjadi pada saat runtime (program berjalan) atau yang lebih dikenal dengan sebutan runtime error.
+Untuk itulah diperlukan mekanisme untuk memastikan bahwa program tetap dapat berjalan meskipun terdapat kesalahan yang terjadi.
+Secara umum, Exception Handling dapat dilakukan menggunakan keyword try-catch.
+
+
+**Jelaskan fungsi dari try / catch dan finally
+try: digunakan untuk menentukan bagian statement program di mana akan terjadi pengecualian. Blok dari try ini harus diikuti dengan catch atau finally.
+catch: digunakan untuk menangani kesalahan/pengecualian yang terjadi. Blok catch dapat diikuti oleh blok finally.
+finally: digunakan untuk mengeksekusi bagian code yang penting dari program. Bagian ini akan tetap dijalankan baik terjadi pengecualian maupun tidak.
