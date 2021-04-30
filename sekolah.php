@@ -26,9 +26,9 @@ class Guru extends Kelas {
 }
 
 class Siswa extends Kelas {
-    public $id_siswa;
-    public $nama_siswa;
-    public $umur_siswa;
+    protected $id_siswa;
+    protected $nama_siswa;
+    protected $umur_siswa;
 
     function __construct($nama_siswa){
         $this->nama_siswa = $nama_siswa;
@@ -39,6 +39,14 @@ class Siswa extends Kelas {
 
     function getnama(){
         return $this->nama_siswa;
+    }
+
+    function getid(){
+        return $this->id_siswa;
+    }
+
+    function getumur(){
+        return $this->umur_siswa;
     }
 
 }
@@ -59,11 +67,11 @@ $siswa_dua = new Siswa("Maulana");
 $siswa_tiga = new Siswa("Hakim");
 
 
-echo "<br /> Siswa yang bernama " . $siswa_satu->getnama() . " memiliki no. id " .$siswa_satu->id_siswa . " dan berusia " . $siswa_satu->umur_siswa . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
+echo "<br /> Siswa yang bernama " . $siswa_satu->getnama() . " memiliki no. id " .$siswa_satu->getid() . " dan berusia " . $siswa_satu->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
 
-echo "<br /> Siswa yang bernama " . $siswa_dua->getnama() . " memiliki no. id " .$siswa_dua->id_siswa . " dan berusia " . $siswa_dua->umur_siswa . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
+echo "<br /> Siswa yang bernama " . $siswa_dua->getnama() . " memiliki no. id " .$siswa_dua->getid() . " dan berusia " . $siswa_dua->getumur() . " tahun. Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
 
-echo "<br /> Siswa yang bernama " . $siswa_tiga->getnama() . " memiliki no. id " .$siswa_tiga->id_siswa . " dan berusia " . $siswa_tiga->umur_siswa . " tahun.Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
+echo "<br /> Siswa yang bernama " . $siswa_tiga->getnama() . " memiliki no. id " .$siswa_tiga->getid() . " dan berusia " . $siswa_tiga->getumur() . " tahun.Siswa tersebut masuk ke dalam kelas " . $kelas_satu->id_kelas . ". <br/><br/>";
 
 ?>
 </body>
